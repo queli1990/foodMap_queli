@@ -1,2 +1,0 @@
-# foodMap_queli
-foodMap
