@@ -37,8 +37,9 @@
         [UIView animateWithDuration:0 animations:^{
             _label.transform = CGAffineTransformRotate(_label.transform,atan(height/width));
         } completion:^(BOOL finished) {
-            _label.transform = CGAffineTransformTranslate(_label.transform,-width*0.3, 0);
+            _label.transform = CGAffineTransformTranslate(_label.transform,-width*0.2, -5);
         }];
+        
     }
     return self;
 }

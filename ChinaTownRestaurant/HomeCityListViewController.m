@@ -108,7 +108,7 @@
         }
         
     } andFailureBlock:^(HomeCityListRequest *responseData) {
-        NSLog(@"选择城市页面请求失败");
+        if (TARGET_IPHONE_SIMULATOR) NSLog(@"选择城市页面请求失败");
     }];
 }
 

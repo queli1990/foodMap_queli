@@ -47,7 +47,7 @@
 - (void) setModel:(HomeCityListModel *)model{
     _model = model;
     _cityLabel.text = model.city_name;
-    [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"TVLog"]];
+    [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"placeholder_16_9"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

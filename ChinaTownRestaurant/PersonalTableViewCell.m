@@ -24,7 +24,7 @@
         [self.contentView addSubview:_titleLabel];
         
         self.headImg = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth-30-30-5, (60-30)/2, 30, 30)];
-        _headImg.image = [UIImage imageNamed:@"TVLog"];
+        _headImg.image = [UIImage imageNamed:@"head_placeholder"];
         _headImg.layer.masksToBounds = YES;
         _headImg.layer.cornerRadius = _headImg.frame.size.width/2;
         [self.contentView addSubview:_headImg];

@@ -60,7 +60,7 @@
     [super viewWillAppear:animated];
     
     
-    NSLog(@"%f",_commentTableView.contentOffset.y);
+//    NSLog(@"%f",_commentTableView.contentOffset.y);
     
     
     _isScrollViewShow = NO;
@@ -261,7 +261,7 @@
 
 - (void) DetailCommentPhotoTableViewCell:(DetailCommentTableViewCell *)cell currentItem:(NSInteger)currentItem{
     //启动图片浏览器
-    NSLog(@"%f",_commentTableView.contentOffset.y);
+    if (TARGET_IPHONE_SIMULATOR) NSLog(@"%f",_commentTableView.contentOffset.y);
     
     STPhotoBrowserController *browserVc = [[STPhotoBrowserController alloc] init];
 //    browserVc.sourceImagesContainerView = cell.contentView; // 原图的父控件
@@ -450,7 +450,7 @@
         btn.selected = !btn.selected;
         
         btn.userInteractionEnabled = NO;
-        NSLog(@"目前不能取消收藏，顾把btn设置为不可点击状态");
+        if (TARGET_IPHONE_SIMULATOR) NSLog(@"目前不能取消收藏，顾把btn设置为不可点击状态");
         
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         [dic setObject:self.businessId forKey:@"businessId"];
@@ -469,7 +469,8 @@
             }];
             
         }else{
-            NSLog(@"取消收藏");
+            
+            if (TARGET_IPHONE_SIMULATOR) NSLog(@"取消收藏");
             
             
             AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -477,7 +478,7 @@
             [manager DELETE:[NSString stringWithFormat:@"http://i.vego.tv:2048/api/collects/%@.json",userID] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 
                 NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-                NSLog(@"%@",dic);
+                if (TARGET_IPHONE_SIMULATOR) NSLog(@"%@",dic);
                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 

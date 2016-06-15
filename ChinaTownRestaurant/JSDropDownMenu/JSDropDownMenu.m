@@ -862,7 +862,7 @@
         
         UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(marginX-29-margin, (44-29)/2, 29, 29)];
         if ([titleLabel.text isEqualToString:@"全部"]) {
-            icon.image = [UIImage imageNamed:@"menu_xiaochi"];
+            icon.image = [UIImage imageNamed:@"menu_all"];
             [cell addSubview:icon];
         }else if ([titleLabel.text isEqualToString:@"小吃面食"]) {
             icon.image = [UIImage imageNamed:@"menu_xiaochi"];

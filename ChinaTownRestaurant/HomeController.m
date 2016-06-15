@@ -193,7 +193,7 @@
         }else{
             _tableView.hidden = YES;
             [self.view addSubview:_noResultView];
-            NSLog(@"请求成功，但是没有数据");
+            if (TARGET_IPHONE_SIMULATOR) NSLog(@"请求成功，但是没有数据");
         }
         _isDeleteOriginalData = NO;
         _isFormChooseCity = NO;
@@ -203,7 +203,7 @@
         [_loader removeFromSuperview];
         [self.view addSubview:_nodataView];
         
-        NSLog(@"列表页请求失败");
+        if (TARGET_IPHONE_SIMULATOR) NSLog(@"列表页请求失败");
         _isDeleteOriginalData = NO;
     }];
     
@@ -242,9 +242,9 @@
 
 - (void) setTableViewHeadView{
     int defultCount = 3;
-    CGFloat boradX = 30;//首个距左边的距离
+    CGFloat boradX = 40;//首个距左边的距离
     CGFloat boradY = 20;//首个距顶部的距离
-    CGFloat marginX = 50;//两个button之间的左右距离
+    CGFloat marginX = 60;//两个button之间的左右距离
     CGFloat marginY = 20;//两个button之间的上下距离
     CGFloat buttonW = (ScreenWidth-marginX*(defultCount-1)-boradX*2)/defultCount;
     CGFloat buttonH = buttonW*5/4;
@@ -269,7 +269,7 @@
         if (ScreenWidth == 320) {
             btn.titleLabel.font = [UIFont systemFontOfSize:13.0];
         }else{
-            btn.titleLabel.font = [UIFont systemFontOfSize:16.0];
+            btn.titleLabel.font = [UIFont systemFontOfSize:14.0];
         }
         
         [btn.titleLabel sizeToFit];
@@ -278,7 +278,22 @@
         btn.imageView.contentMode = UIViewContentModeScaleAspectFit;
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         
-        [btn sd_setImageWithURL:[NSURL URLWithString:model.image] forState:UIControlStateNormal];
+//        [btn sd_setImageWithURL:[NSURL URLWithString:model.image] forState:UIControlStateNormal];//从接口请求的图片，替换为下面这行代码
+        if ([model.category_name isEqualToString:@"小吃面食"]) {
+            [btn setImage:[UIImage imageNamed:@"SnackFood"] forState:UIControlStateNormal];
+        }else if ([model.category_name isEqualToString:@"粤菜"]){
+            [btn setImage:[UIImage imageNamed:@"GuangDongFood"] forState:UIControlStateNormal];
+        }else if ([model.category_name isEqualToString:@"川菜"]){
+            [btn setImage:[UIImage imageNamed:@"SiChuanFood"] forState:UIControlStateNormal];
+        }else if([model.category_name isEqualToString:@"东北菜"]){
+            [btn setImage:[UIImage imageNamed:@"DongBeiFood"] forState:UIControlStateNormal];
+        }else if([model.category_name isEqualToString:@"江浙菜"]){
+            [btn setImage:[UIImage imageNamed:@"JiangZheFood"] forState:UIControlStateNormal];
+        }else if ([model.category_name isEqualToString:@"全部"]){
+            [btn setImage:[UIImage imageNamed:@"AllFood"] forState:UIControlStateNormal];
+        }
+        
+        
         [btn addTarget:self action:@selector(headBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [_headView addSubview:btn];
         

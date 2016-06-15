@@ -15,9 +15,9 @@
         self.backgroundColor = [UIColor clearColor];
         
         self.backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _backBtn.frame = CGRectMake(15, 20+(44-49*0.5)/2, 50, 49*0.5);
+        _backBtn.frame = CGRectMake(15, 20+(44-49*0.4)/2, 50, 49*0.4);
         [_backBtn setImage:[UIImage imageNamed:@"ArrowLeft"] forState:UIControlStateNormal];
-        _backBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, (50-28*0.5));
+        _backBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, (50-28*0.4));
         [self addSubview:_backBtn];
         
         _searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];

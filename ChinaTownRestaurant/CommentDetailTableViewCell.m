@@ -56,7 +56,7 @@
 - (void) setModel:(Detail_Comment *)model{
     
     _model = model;
-    [_headImageView sd_setImageWithURL:[NSURL URLWithString:model.userAvatar] placeholderImage:[UIImage imageNamed:@"TVLog"]];
+    [_headImageView sd_setImageWithURL:[NSURL URLWithString:model.userAvatar] placeholderImage:[UIImage imageNamed:@"head_placeholder"]];
     _nickNameLabel.text = model.username;
     
     _commentLabel.text = model.comment;

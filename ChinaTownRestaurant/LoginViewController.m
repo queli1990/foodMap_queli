@@ -174,6 +174,7 @@
             [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"userId"];
             PersonalViewController *vc = [[PersonalViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+            
         }else{
             UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"警告" message:@"用户名或密码错误" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [success show];

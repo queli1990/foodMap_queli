@@ -108,7 +108,7 @@
     CGFloat decoration = model.decorationscore.floatValue;
     _evaluateLabelOnImageView.text = [NSString stringWithFormat:@"%.1f",decoration];
     
-    [_headImageView sd_setImageWithURL:[NSURL URLWithString:model.userAvatar] placeholderImage:[UIImage imageNamed:@"placeholder_1_1"]];
+    [_headImageView sd_setImageWithURL:[NSURL URLWithString:model.userAvatar] placeholderImage:[UIImage imageNamed:@"head_placeholder"]];
     _nickNameLabel.text = model.username;
     
     _commentLabel.text = model.comment;

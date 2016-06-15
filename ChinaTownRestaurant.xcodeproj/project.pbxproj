@@ -34,12 +34,6 @@
 		FB05CAAC1CCF10D300E7E440 /* personal.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAAB1CCF10D300E7E440 /* personal.png */; };
 		FB05CAAE1CCF12A200E7E440 /* searchBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAAD1CCF12A200E7E440 /* searchBg.png */; };
 		FB05CAB01CCF3E1700E7E440 /* ArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAAF1CCF3E1700E7E440 /* ArrowDown.png */; };
-		FB05CAB31CCF400000E7E440 /* SnackFood.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAB21CCF400000E7E440 /* SnackFood.png */; };
-		FB05CAB51CCF402400E7E440 /* GuangDongFood.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAB41CCF402400E7E440 /* GuangDongFood.png */; };
-		FB05CAB71CCF403E00E7E440 /* SiChuanFood.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAB61CCF403E00E7E440 /* SiChuanFood.png */; };
-		FB05CAB91CCF406100E7E440 /* DongBeiFood.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAB81CCF406100E7E440 /* DongBeiFood.png */; };
-		FB05CABB1CCF407500E7E440 /* JiangZheFood.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CABA1CCF407500E7E440 /* JiangZheFood.png */; };
-		FB05CABD1CCF408800E7E440 /* AllFood.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CABC1CCF408800E7E440 /* AllFood.png */; };
 		FB05CABF1CCF494700E7E440 /* HomeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CABE1CCF494700E7E440 /* HomeBackground.png */; };
 		FB05CAC31CCF567A00E7E440 /* HomeCellIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05CAC21CCF567A00E7E440 /* HomeCellIcon.png */; };
 		FB05CAC61CCF693300E7E440 /* TipView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05CAC51CCF693300E7E440 /* TipView.m */; };
@@ -61,6 +55,27 @@
 		FB0F733C1CC0CB7400D0E346 /* TimerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0F733B1CC0CB7400D0E346 /* TimerImage.png */; };
 		FB0F733F1CC0DF0400D0E346 /* Search_DeleteAllImage_highted.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0F733D1CC0DF0400D0E346 /* Search_DeleteAllImage_highted.png */; };
 		FB0F73401CC0DF0400D0E346 /* Search_DeleteAllImage.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0F733E1CC0DF0400D0E346 /* Search_DeleteAllImage.png */; };
+		FB13AE4F1CE9A46300258B63 /* AllFood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE431CE9A46300258B63 /* AllFood@2x.png */; };
+		FB13AE501CE9A46300258B63 /* DongBeiFood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE441CE9A46300258B63 /* DongBeiFood@2x.png */; };
+		FB13AE511CE9A46300258B63 /* GuangDongFood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE451CE9A46300258B63 /* GuangDongFood@2x.png */; };
+		FB13AE521CE9A46300258B63 /* JiangZheFood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE461CE9A46300258B63 /* JiangZheFood@2x.png */; };
+		FB13AE531CE9A46300258B63 /* SiChuanFood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE471CE9A46300258B63 /* SiChuanFood@2x.png */; };
+		FB13AE541CE9A46300258B63 /* SnackFood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE481CE9A46300258B63 /* SnackFood@2x.png */; };
+		FB13AE551CE9A46300258B63 /* AllFood@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE491CE9A46300258B63 /* AllFood@3x.png */; };
+		FB13AE561CE9A46300258B63 /* DongBeiFood@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE4A1CE9A46300258B63 /* DongBeiFood@3x.png */; };
+		FB13AE571CE9A46300258B63 /* GuangDongFood@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE4B1CE9A46300258B63 /* GuangDongFood@3x.png */; };
+		FB13AE581CE9A46300258B63 /* JiangZheFood@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE4C1CE9A46300258B63 /* JiangZheFood@3x.png */; };
+		FB13AE591CE9A46300258B63 /* SiChuanFood@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE4D1CE9A46300258B63 /* SiChuanFood@3x.png */; };
+		FB13AE5A1CE9A46300258B63 /* SnackFood@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE4E1CE9A46300258B63 /* SnackFood@3x.png */; };
+		FB13AE5C1CE9AE1E00258B63 /* menu_all.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE5B1CE9AE1E00258B63 /* menu_all.png */; };
+		FB13AE5F1CE9AF7D00258B63 /* head_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE5E1CE9AF7D00258B63 /* head_placeholder.png */; };
+		FB13AE611CE9B77000258B63 /* tip_red.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE601CE9B77000258B63 /* tip_red.png */; };
+		FB13AE631CE9F89200258B63 /* GuideMap.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE621CE9F89200258B63 /* GuideMap.png */; };
+		FB13AE691CEA05C400258B63 /* cell_icon_sichuan.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE641CEA05C400258B63 /* cell_icon_sichuan.png */; };
+		FB13AE6A1CEA05C400258B63 /* cell_icon_dongbei.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE651CEA05C400258B63 /* cell_icon_dongbei.png */; };
+		FB13AE6B1CEA05C400258B63 /* cell_icon_jiangzhe.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE661CEA05C400258B63 /* cell_icon_jiangzhe.png */; };
+		FB13AE6C1CEA05C400258B63 /* cell_icon_sneck.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE671CEA05C400258B63 /* cell_icon_sneck.png */; };
+		FB13AE6D1CEA05C400258B63 /* cell_icon_guangdong.png in Resources */ = {isa = PBXBuildFile; fileRef = FB13AE681CEA05C400258B63 /* cell_icon_guangdong.png */; };
 		FB1481A11CBCCA760057EB5A /* MapCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1481A01CBCCA760057EB5A /* MapCustomCalloutView.m */; };
 		FB1481A71CBCCD770057EB5A /* MapCustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1481A61CBCCD770057EB5A /* MapCustomAnnotationView.m */; };
 		FB1481AB1CBCDB000057EB5A /* ChinaTownListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1481AA1CBCDB000057EB5A /* ChinaTownListRequest.m */; };
@@ -199,7 +214,6 @@
 		FBC898A71CE3349D000921F6 /* placeholder_16_9.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC898A61CE3349D000921F6 /* placeholder_16_9.png */; };
 		FBC898A91CE334AD000921F6 /* placeholder_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC898A81CE334AD000921F6 /* placeholder_1_1.png */; };
 		FBC898AB1CE33ECB000921F6 /* placeholder_3_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC898AA1CE33ECB000921F6 /* placeholder_3_2.png */; };
-		FBC898AD1CE4217E000921F6 /* GuideMap.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC898AC1CE4217E000921F6 /* GuideMap.png */; };
 		FBC898AF1CE421A3000921F6 /* GuideLine1.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC898AE1CE421A2000921F6 /* GuideLine1.png */; };
 		FBC898C41CE42CFD000921F6 /* GuideClearBg_640-960.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC898C01CE42CFD000921F6 /* GuideClearBg_640-960.png */; };
 		FBC898C51CE42CFD000921F6 /* GuideClearBg_640-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC898C11CE42CFD000921F6 /* GuideClearBg_640-1136.png */; };
@@ -292,12 +306,6 @@
 		FB05CAAB1CCF10D300E7E440 /* personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal.png; sourceTree = "<group>"; };
 		FB05CAAD1CCF12A200E7E440 /* searchBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchBg.png; sourceTree = "<group>"; };
 		FB05CAAF1CCF3E1700E7E440 /* ArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArrowDown.png; sourceTree = "<group>"; };
-		FB05CAB21CCF400000E7E440 /* SnackFood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnackFood.png; sourceTree = "<group>"; };
-		FB05CAB41CCF402400E7E440 /* GuangDongFood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuangDongFood.png; sourceTree = "<group>"; };
-		FB05CAB61CCF403E00E7E440 /* SiChuanFood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SiChuanFood.png; sourceTree = "<group>"; };
-		FB05CAB81CCF406100E7E440 /* DongBeiFood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DongBeiFood.png; sourceTree = "<group>"; };
-		FB05CABA1CCF407500E7E440 /* JiangZheFood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JiangZheFood.png; sourceTree = "<group>"; };
-		FB05CABC1CCF408800E7E440 /* AllFood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AllFood.png; sourceTree = "<group>"; };
 		FB05CABE1CCF494700E7E440 /* HomeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeBackground.png; sourceTree = "<group>"; };
 		FB05CAC21CCF567A00E7E440 /* HomeCellIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeCellIcon.png; sourceTree = "<group>"; };
 		FB05CAC41CCF693300E7E440 /* TipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipView.h; sourceTree = "<group>"; };
@@ -324,6 +332,27 @@
 		FB0F733B1CC0CB7400D0E346 /* TimerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimerImage.png; sourceTree = "<group>"; };
 		FB0F733D1CC0DF0400D0E346 /* Search_DeleteAllImage_highted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search_DeleteAllImage_highted.png; sourceTree = "<group>"; };
 		FB0F733E1CC0DF0400D0E346 /* Search_DeleteAllImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search_DeleteAllImage.png; sourceTree = "<group>"; };
+		FB13AE431CE9A46300258B63 /* AllFood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AllFood@2x.png"; sourceTree = "<group>"; };
+		FB13AE441CE9A46300258B63 /* DongBeiFood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DongBeiFood@2x.png"; sourceTree = "<group>"; };
+		FB13AE451CE9A46300258B63 /* GuangDongFood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuangDongFood@2x.png"; sourceTree = "<group>"; };
+		FB13AE461CE9A46300258B63 /* JiangZheFood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JiangZheFood@2x.png"; sourceTree = "<group>"; };
+		FB13AE471CE9A46300258B63 /* SiChuanFood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SiChuanFood@2x.png"; sourceTree = "<group>"; };
+		FB13AE481CE9A46300258B63 /* SnackFood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SnackFood@2x.png"; sourceTree = "<group>"; };
+		FB13AE491CE9A46300258B63 /* AllFood@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AllFood@3x.png"; sourceTree = "<group>"; };
+		FB13AE4A1CE9A46300258B63 /* DongBeiFood@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DongBeiFood@3x.png"; sourceTree = "<group>"; };
+		FB13AE4B1CE9A46300258B63 /* GuangDongFood@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuangDongFood@3x.png"; sourceTree = "<group>"; };
+		FB13AE4C1CE9A46300258B63 /* JiangZheFood@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JiangZheFood@3x.png"; sourceTree = "<group>"; };
+		FB13AE4D1CE9A46300258B63 /* SiChuanFood@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SiChuanFood@3x.png"; sourceTree = "<group>"; };
+		FB13AE4E1CE9A46300258B63 /* SnackFood@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SnackFood@3x.png"; sourceTree = "<group>"; };
+		FB13AE5B1CE9AE1E00258B63 /* menu_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_all.png; sourceTree = "<group>"; };
+		FB13AE5E1CE9AF7D00258B63 /* head_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_placeholder.png; sourceTree = "<group>"; };
+		FB13AE601CE9B77000258B63 /* tip_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tip_red.png; sourceTree = "<group>"; };
+		FB13AE621CE9F89200258B63 /* GuideMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuideMap.png; sourceTree = "<group>"; };
+		FB13AE641CEA05C400258B63 /* cell_icon_sichuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_icon_sichuan.png; sourceTree = "<group>"; };
+		FB13AE651CEA05C400258B63 /* cell_icon_dongbei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_icon_dongbei.png; sourceTree = "<group>"; };
+		FB13AE661CEA05C400258B63 /* cell_icon_jiangzhe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_icon_jiangzhe.png; sourceTree = "<group>"; };
+		FB13AE671CEA05C400258B63 /* cell_icon_sneck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_icon_sneck.png; sourceTree = "<group>"; };
+		FB13AE681CEA05C400258B63 /* cell_icon_guangdong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_icon_guangdong.png; sourceTree = "<group>"; };
 		FB14819F1CBCCA760057EB5A /* MapCustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCustomCalloutView.h; sourceTree = "<group>"; };
 		FB1481A01CBCCA760057EB5A /* MapCustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCustomCalloutView.m; sourceTree = "<group>"; };
 		FB1481A51CBCCD770057EB5A /* MapCustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCustomAnnotationView.h; sourceTree = "<group>"; };
@@ -407,7 +436,7 @@
 		FB1CBD841CD88DCB00AFBC72 /* Guide0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Guide0.png; sourceTree = "<group>"; };
 		FB1CBD851CD88DCB00AFBC72 /* Guide1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Guide1.png; sourceTree = "<group>"; };
 		FB1CBD861CD88DCB00AFBC72 /* Guide3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Guide3.png; sourceTree = "<group>"; };
-		FB2159B01CB6633100F0AB1E /* ChinaTownRestaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinaTownRestaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2159B01CB6633100F0AB1E /* 美食地图.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "美食地图.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2159B41CB6633100F0AB1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB2159B61CB6633100F0AB1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB2159B71CB6633100F0AB1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -562,7 +591,6 @@
 		FBC898A61CE3349D000921F6 /* placeholder_16_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_16_9.png; sourceTree = "<group>"; };
 		FBC898A81CE334AD000921F6 /* placeholder_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_1_1.png; sourceTree = "<group>"; };
 		FBC898AA1CE33ECB000921F6 /* placeholder_3_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_3_2.png; sourceTree = "<group>"; };
-		FBC898AC1CE4217E000921F6 /* GuideMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuideMap.png; sourceTree = "<group>"; };
 		FBC898AE1CE421A2000921F6 /* GuideLine1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuideLine1.png; sourceTree = "<group>"; };
 		FBC898C01CE42CFD000921F6 /* GuideClearBg_640-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuideClearBg_640-960.png"; sourceTree = "<group>"; };
 		FBC898C11CE42CFD000921F6 /* GuideClearBg_640-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuideClearBg_640-1136.png"; sourceTree = "<group>"; };
@@ -698,17 +726,28 @@
 		FB05CAB11CCF3FF400E7E440 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FB13AE641CEA05C400258B63 /* cell_icon_sichuan.png */,
+				FB13AE651CEA05C400258B63 /* cell_icon_dongbei.png */,
+				FB13AE661CEA05C400258B63 /* cell_icon_jiangzhe.png */,
+				FB13AE671CEA05C400258B63 /* cell_icon_sneck.png */,
+				FB13AE681CEA05C400258B63 /* cell_icon_guangdong.png */,
 				FB8797181CD22DCB00E6617B /* clearHomeBackground.png */,
 				FB0EAE9D1CD0D5E8007CFF55 /* HomeCellShade.png */,
 				FB05CAC71CCF69E900E7E440 /* tip.png */,
 				FB05CAC21CCF567A00E7E440 /* HomeCellIcon.png */,
 				FB05CABE1CCF494700E7E440 /* HomeBackground.png */,
-				FB05CABC1CCF408800E7E440 /* AllFood.png */,
-				FB05CABA1CCF407500E7E440 /* JiangZheFood.png */,
-				FB05CAB81CCF406100E7E440 /* DongBeiFood.png */,
-				FB05CAB61CCF403E00E7E440 /* SiChuanFood.png */,
-				FB05CAB41CCF402400E7E440 /* GuangDongFood.png */,
-				FB05CAB21CCF400000E7E440 /* SnackFood.png */,
+				FB13AE431CE9A46300258B63 /* AllFood@2x.png */,
+				FB13AE441CE9A46300258B63 /* DongBeiFood@2x.png */,
+				FB13AE451CE9A46300258B63 /* GuangDongFood@2x.png */,
+				FB13AE461CE9A46300258B63 /* JiangZheFood@2x.png */,
+				FB13AE471CE9A46300258B63 /* SiChuanFood@2x.png */,
+				FB13AE481CE9A46300258B63 /* SnackFood@2x.png */,
+				FB13AE491CE9A46300258B63 /* AllFood@3x.png */,
+				FB13AE4A1CE9A46300258B63 /* DongBeiFood@3x.png */,
+				FB13AE4B1CE9A46300258B63 /* GuangDongFood@3x.png */,
+				FB13AE4C1CE9A46300258B63 /* JiangZheFood@3x.png */,
+				FB13AE4D1CE9A46300258B63 /* SiChuanFood@3x.png */,
+				FB13AE4E1CE9A46300258B63 /* SnackFood@3x.png */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -716,6 +755,7 @@
 		FB0EAEA91CD1FBBB007CFF55 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				FB13AE601CE9B77000258B63 /* tip_red.png */,
 				FB1CAE1C1CE0644C00D29081 /* Detail_Map_backNormal.png */,
 				FBC8989B1CE329F7000921F6 /* Detail_Map_backHeighted.png */,
 				FB0EAEBB1CD21D70007CFF55 /* comment.png */,
@@ -756,6 +796,24 @@
 				FBE4A0491CD8C03100ABF143 /* HomeBigRequest.m */,
 			);
 			name = HomeRequest;
+			sourceTree = "<group>";
+		};
+		FB13AE5D1CE9AF4200258B63 /* NavAndMixed */ = {
+			isa = PBXGroup;
+			children = (
+				FB13AE5E1CE9AF7D00258B63 /* head_placeholder.png */,
+				FB05CAAF1CCF3E1700E7E440 /* ArrowDown.png */,
+				FB05CAAD1CCF12A200E7E440 /* searchBg.png */,
+				FB05CAAB1CCF10D300E7E440 /* personal.png */,
+				FB0F733D1CC0DF0400D0E346 /* Search_DeleteAllImage_highted.png */,
+				FB0F733E1CC0DF0400D0E346 /* Search_DeleteAllImage.png */,
+				FB0F733B1CC0CB7400D0E346 /* TimerImage.png */,
+				FB05C9AD1CC5CE7E00E7E440 /* Magnifier.png */,
+				FB05C9AB1CC5CABD00E7E440 /* ArrowLeft.png */,
+				FB215A3A1CB74FAF00F0AB1E /* ArrowRight.png */,
+				FB215A3C1CB751DB00F0AB1E /* TVLog.png */,
+			);
+			name = NavAndMixed;
 			sourceTree = "<group>";
 		};
 		FB1481A81CBCDAC40057EB5A /* ChinaTownListRequest */ = {
@@ -922,7 +980,7 @@
 		FB2159B11CB6633100F0AB1E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB2159B01CB6633100F0AB1E /* ChinaTownRestaurant.app */,
+				FB2159B01CB6633100F0AB1E /* 美食地图.app */,
 				FB2159C91CB6633200F0AB1E /* ChinaTownRestaurantTests.xctest */,
 				FB2159D41CB6633200F0AB1E /* ChinaTownRestaurantUITests.xctest */,
 			);
@@ -1213,16 +1271,7 @@
 				FB1CBD821CD88DC000AFBC72 /* FirstStart */,
 				FB0EAEA91CD1FBBB007CFF55 /* Detail */,
 				FB05CAB11CCF3FF400E7E440 /* Home */,
-				FB05CAAF1CCF3E1700E7E440 /* ArrowDown.png */,
-				FB05CAAD1CCF12A200E7E440 /* searchBg.png */,
-				FB05CAAB1CCF10D300E7E440 /* personal.png */,
-				FB0F733D1CC0DF0400D0E346 /* Search_DeleteAllImage_highted.png */,
-				FB0F733E1CC0DF0400D0E346 /* Search_DeleteAllImage.png */,
-				FB0F733B1CC0CB7400D0E346 /* TimerImage.png */,
-				FB05C9AD1CC5CE7E00E7E440 /* Magnifier.png */,
-				FB05C9AB1CC5CABD00E7E440 /* ArrowLeft.png */,
-				FB215A3A1CB74FAF00F0AB1E /* ArrowRight.png */,
-				FB215A3C1CB751DB00F0AB1E /* TVLog.png */,
+				FB13AE5D1CE9AF4200258B63 /* NavAndMixed */,
 			);
 			name = Img;
 			sourceTree = "<group>";
@@ -1343,9 +1392,9 @@
 		FBE4A0691CDAF40000ABF143 /* LaunchAnimate */ = {
 			isa = PBXGroup;
 			children = (
+				FB13AE621CE9F89200258B63 /* GuideMap.png */,
 				FBE4A05E1CDA1EE200ABF143 /* GuideClearBg.png */,
 				FBE4A05F1CDA1EE200ABF143 /* GuideDimBg.png */,
-				FBC898AC1CE4217E000921F6 /* GuideMap.png */,
 				FBE4A0611CDA1EE200ABF143 /* GuideLine.png */,
 				FBC898AE1CE421A2000921F6 /* GuideLine1.png */,
 				FBC898C01CE42CFD000921F6 /* GuideClearBg_640-960.png */,
@@ -1359,6 +1408,7 @@
 		FBE4A0741CDC821200ABF143 /* RecommendList */ = {
 			isa = PBXGroup;
 			children = (
+				FB13AE5B1CE9AE1E00258B63 /* menu_all.png */,
 				FB1CAE311CE0878100D29081 /* menu_xiaochi.png */,
 				FB1CAE2F1CE0876E00D29081 /* menu_yue.png */,
 				FB1CAE291CE0872D00D29081 /* menu_sichuan.png */,
@@ -1398,7 +1448,7 @@
 			);
 			name = ChinaTownRestaurant;
 			productName = ChinaTownRestaurant;
-			productReference = FB2159B01CB6633100F0AB1E /* ChinaTownRestaurant.app */;
+			productReference = FB2159B01CB6633100F0AB1E /* 美食地图.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FB2159C81CB6633200F0AB1E /* ChinaTownRestaurantTests */ = {
@@ -1488,15 +1538,15 @@
 				FBC8989C1CE329F7000921F6 /* Detail_Map_backHeighted.png in Resources */,
 				FBC898AF1CE421A3000921F6 /* GuideLine1.png in Resources */,
 				FB1CAE301CE0876E00D29081 /* menu_yue.png in Resources */,
-				FBC898AD1CE4217E000921F6 /* GuideMap.png in Resources */,
+				FB13AE591CE9A46300258B63 /* SiChuanFood@3x.png in Resources */,
+				FB13AE611CE9B77000258B63 /* tip_red.png in Resources */,
+				FB13AE6C1CEA05C400258B63 /* cell_icon_sneck.png in Resources */,
 				FB0EAEBA1CD217BA007CFF55 /* evaluate.png in Resources */,
-				FB05CAB91CCF406100E7E440 /* DongBeiFood.png in Resources */,
 				FB1CAE1D1CE0644C00D29081 /* Detail_Map_backNormal.png in Resources */,
 				FB8797191CD22DCB00E6617B /* clearHomeBackground.png in Resources */,
-				FB05CAB31CCF400000E7E440 /* SnackFood.png in Resources */,
+				FB13AE521CE9A46300258B63 /* JiangZheFood@2x.png in Resources */,
 				FBE4A0681CDAEAAA00ABF143 /* CityList_shadow.png in Resources */,
 				FB1CAE201CE0653500D29081 /* loginAndRegistBg.png in Resources */,
-				FB05CAB71CCF403E00E7E440 /* SiChuanFood.png in Resources */,
 				FB05C9AE1CC5CE7E00E7E440 /* Magnifier.png in Resources */,
 				FBC898AB1CE33ECB000921F6 /* placeholder_3_2.png in Resources */,
 				FB1CAE261CE07E1F00D29081 /* addressIcon.png in Resources */,
@@ -1504,14 +1554,17 @@
 				FB215B361CBC89B100F0AB1E /* AMap.bundle in Resources */,
 				FB05CAB01CCF3E1700E7E440 /* ArrowDown.png in Resources */,
 				FB0EAEB51CD20864007CFF55 /* tip_ circle.png in Resources */,
-				FB05CAB51CCF402400E7E440 /* GuangDongFood.png in Resources */,
 				FB0EAEB31CD207B1007CFF55 /* phoneSelected.png in Resources */,
 				FB05CABF1CCF494700E7E440 /* HomeBackground.png in Resources */,
+				FB13AE6A1CEA05C400258B63 /* cell_icon_dongbei.png in Resources */,
 				FB2159C31CB6633100F0AB1E /* LaunchScreen.storyboard in Resources */,
+				FB13AE631CE9F89200258B63 /* GuideMap.png in Resources */,
 				FB05CAC31CCF567A00E7E440 /* HomeCellIcon.png in Resources */,
+				FB13AE6B1CEA05C400258B63 /* cell_icon_jiangzhe.png in Resources */,
 				FBC898A21CE33360000921F6 /* personalBgNormal.png in Resources */,
 				FB1CAE2E1CE0875800D29081 /* menu_jiangzhe.png in Resources */,
 				FB215ADD1CBB3BE200F0AB1E /* ico_make.png in Resources */,
+				FB13AE501CE9A46300258B63 /* DongBeiFood@2x.png in Resources */,
 				FBC898C51CE42CFD000921F6 /* GuideClearBg_640-1136.png in Resources */,
 				FBC898A71CE3349D000921F6 /* placeholder_16_9.png in Resources */,
 				FB0EAE9E1CD0D5E8007CFF55 /* HomeCellShade.png in Resources */,
@@ -1521,7 +1574,12 @@
 				FB05C9AC1CC5CABD00E7E440 /* ArrowLeft.png in Resources */,
 				FB215A3B1CB74FAF00F0AB1E /* ArrowRight.png in Resources */,
 				FB1CAE2A1CE0872D00D29081 /* menu_sichuan.png in Resources */,
+				FB13AE6D1CEA05C400258B63 /* cell_icon_guangdong.png in Resources */,
+				FB13AE561CE9A46300258B63 /* DongBeiFood@3x.png in Resources */,
+				FB13AE541CE9A46300258B63 /* SnackFood@2x.png in Resources */,
+				FB13AE531CE9A46300258B63 /* SiChuanFood@2x.png in Resources */,
 				FBC8989E1CE332F4000921F6 /* personal_clearBtnHeighted.png in Resources */,
+				FB13AE571CE9A46300258B63 /* GuangDongFood@3x.png in Resources */,
 				FBE4A0761CDC822200ABF143 /* recommendChooseCellBg.png in Resources */,
 				FBC898C71CE42CFD000921F6 /* GuideClearBg_1242-2208.png in Resources */,
 				FB1CBD881CD88DCB00AFBC72 /* Guide0.png in Resources */,
@@ -1535,26 +1593,32 @@
 				FB1CBD871CD88DCB00AFBC72 /* Guide2.png in Resources */,
 				FB0EAEAB1CD1FC98007CFF55 /* Detail_leftArrow.png in Resources */,
 				FBC898C41CE42CFD000921F6 /* GuideClearBg_640-960.png in Resources */,
-				FB05CABD1CCF408800E7E440 /* AllFood.png in Resources */,
 				FBE4A0621CDA1EE200ABF143 /* GuideClearBg.png in Resources */,
 				FB0EAEAD1CD20351007CFF55 /* Detail_MapBackgorund.jpg in Resources */,
 				FBE4A0651CDA1EE200ABF143 /* GuideLine.png in Resources */,
 				FB0EAEBC1CD21D70007CFF55 /* comment.png in Resources */,
+				FB13AE691CEA05C400258B63 /* cell_icon_sichuan.png in Resources */,
 				FB2159BE1CB6633100F0AB1E /* Main.storyboard in Resources */,
+				FB13AE5A1CE9A46300258B63 /* SnackFood@3x.png in Resources */,
 				FBE4A0631CDA1EE200ABF143 /* GuideDimBg.png in Resources */,
+				FB13AE5F1CE9AF7D00258B63 /* head_placeholder.png in Resources */,
 				FB1CBD891CD88DCB00AFBC72 /* Guide1.png in Resources */,
-				FB05CABB1CCF407500E7E440 /* JiangZheFood.png in Resources */,
 				FBE4A0501CD9E6FA00ABF143 /* Guide4.png in Resources */,
 				FB0EAEB21CD207B1007CFF55 /* phoneNomal.png in Resources */,
 				FBC898A91CE334AD000921F6 /* placeholder_1_1.png in Resources */,
 				FB0F73401CC0DF0400D0E346 /* Search_DeleteAllImage.png in Resources */,
 				FBE4A06C1CDB227A00ABF143 /* CityList_backHeighted.png in Resources */,
+				FB13AE511CE9A46300258B63 /* GuangDongFood@2x.png in Resources */,
 				FB0F733F1CC0DF0400D0E346 /* Search_DeleteAllImage_highted.png in Resources */,
 				FB05CAAE1CCF12A200E7E440 /* searchBg.png in Resources */,
+				FB13AE551CE9A46300258B63 /* AllFood@3x.png in Resources */,
 				FBE4A0511CD9E6FA00ABF143 /* Guide5.png in Resources */,
+				FB13AE581CE9A46300258B63 /* JiangZheFood@3x.png in Resources */,
 				FBE4A06D1CDB227A00ABF143 /* CityList_backNormal.png in Resources */,
 				FB05CAC81CCF69E900E7E440 /* tip.png in Resources */,
 				FBC898A11CE33360000921F6 /* personalBgHeighted.png in Resources */,
+				FB13AE4F1CE9A46300258B63 /* AllFood@2x.png in Resources */,
+				FB13AE5C1CE9AE1E00258B63 /* menu_all.png in Resources */,
 				FB1CAE321CE0878100D29081 /* menu_xiaochi.png in Resources */,
 				FB1CAE281CE07EAA00D29081 /* foodCategory.png in Resources */,
 				FB1CAE221CE072F500D29081 /* personal_lock.png in Resources */,
@@ -1870,7 +1934,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gochinatv.ChinaTownRestaurant.mobileapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "美食地图";
 				PROVISIONING_PROFILE = "0b47e3f1-8640-4b84-bf78-2f21647fd0c0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1896,7 +1960,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gochinatv.ChinaTownRestaurant.mobileapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "美食地图";
 				PROVISIONING_PROFILE = "0b47e3f1-8640-4b84-bf78-2f21647fd0c0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -123,13 +123,18 @@
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
     if (_textField.text.length>5) {
         
-        NSLog(@"提交评论");
+        if (TARGET_IPHONE_SIMULATOR) NSLog(@"提交评论");
         
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         [dic setObject:_userID forKey:@"userid"];
         [dic setObject:self.thirdid forKey:@"thirdid"];
         [dic setObject:_textField.text forKey:@"commentsource"];
-        [dic setObject:_decorationscore forKey:@"decorationscore"];
+        if (_decorationscore == nil) {
+            [dic setObject:@"5.0" forKey:@"decorationscore"];
+        }else{
+            [dic setObject:_decorationscore forKey:@"decorationscore"];
+        }
+        
         
 //        http://i.vego.tv:2048/comment/saveOrUpdate.json?
 //        userid=201&

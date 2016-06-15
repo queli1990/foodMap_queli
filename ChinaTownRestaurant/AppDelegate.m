@@ -84,42 +84,47 @@
     
 //    [[NSUserDefaults standardUserDefaults] setObject:@"11" forKey:@"isFirstLogin"];//为了测试首次的启动页
     
-    NSString *isFirstLogin = [_user objectForKey:@"isFirstLogin"];
-    if ([isFirstLogin isEqualToString:@"NO"]) {
-        HomeController *vc = [[HomeController alloc] init];
+//    NSString *isFirstLogin = [_user objectForKey:@"isFirstLogin"];
+//    if ([isFirstLogin isEqualToString:@"NO"]) {
+//        HomeController *vc = [[HomeController alloc] init];
 //        BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        self.window.rootViewController = nav;
-    }else{
-        ViewController *vc = [[ViewController alloc] init];
-        vc.count = 6;
-        BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
-        self.window.rootViewController = nav;
-    }
+//        self.window.rootViewController = nav;
+//    }else{
+//        ViewController *vc = [[ViewController alloc] init];
+//        vc.count = 6;
+//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//        self.window.rootViewController = nav;
+//    }
+    HomeController *vc = [[HomeController alloc] init];
+    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+    
     
     [self.window makeKeyAndVisible];
     
     
     bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth * 1.25, ScreenHeight * 1.25)];
     bgImageView.image = [UIImage imageNamed:@"GuideClearBg"];
-//    if (ScreenHeight == 480) {
+    
+//    if ([UIScreen mainScreen].bounds.size.height == 480) {
 //        bgImageView.image = [UIImage imageNamed:@"GuideClearBg_640-960"];
-//    }else if (ScreenHeight == 568){
+//    }else if ([UIScreen mainScreen].bounds.size.height == 568){
 //        bgImageView.image = [UIImage imageNamed:@"GuideClearBg_640-1136"];
-//    }else if (ScreenHeight == 667){
-//        bgImageView.image = [UIImage imageNamed:@"GuideClearBg_750-1134"];
+//    }else if ([UIScreen mainScreen].bounds.size.height == 667){
+//        bgImageView.image = [UIImage imageNamed:@"GuideClearBg_750-1334"];
 //    }else{
 //        bgImageView.image = [UIImage imageNamed:@"GuideClearBg_1242-2208"];
 //    }
     
+    
     bgImageView.center = self.window.center;
-    [self.window addSubview:bgImageView];
+//    [self.window addSubview:bgImageView];
     
     maskImageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    maskImageView.backgroundColor = UIColorFromRGB(0x221F17, 1.0);
+    maskImageView.backgroundColor = UIColorFromRGB(0x211817, 1.0);
 //    maskImageView.image = [UIImage imageNamed:@"GuideDimBg.png"];//背景图片用颜色代替
     maskImageView.layer.opacity = 0.0f;
-    [self.window addSubview:maskImageView];
+//    [self.window addSubview:maskImageView];
     
     UIImageView *titleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 99, 160)];
     titleImageView.image = [UIImage imageNamed:@"GuideMap.png"];
@@ -131,7 +136,7 @@
     pathImageView.center = CGPointMake(ScreenWidth /2.0f, 450);
     [maskImageView addSubview:pathImageView];
     
-    [self taped];
+//    [self taped];
     return YES;
 }
 

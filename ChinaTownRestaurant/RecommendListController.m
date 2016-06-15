@@ -232,7 +232,7 @@
         }else{
             _tableView.hidden = YES;
             [self.view addSubview:_noResultView];
-            NSLog(@"请求成功，但是没有数据");
+            if (TARGET_IPHONE_SIMULATOR) NSLog(@"请求成功，但是没有数据");
         }
         _isDeleteOriginalData = NO;
     } andFailureBlock:^(ChinaTownListRequest *responseData) {
@@ -240,7 +240,7 @@
         [_loader removeFromSuperview];
         [self.view addSubview:_nodataView];
         
-        NSLog(@"列表页请求失败");
+        if (TARGET_IPHONE_SIMULATOR) NSLog(@"列表页请求失败");
         _isDeleteOriginalData = NO;
     }];
 }
@@ -460,14 +460,17 @@
         UIView *viewForNav = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 64)];
         viewForNav.backgroundColor = [UIColor blackColor];
         
+        
         UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [backBtn setImage:[UIImage imageNamed:@"TVLog"] forState:UIControlStateNormal];
-        backBtn.frame = CGRectMake(15, 20+(44-20)/2, 20, 20);
+        backBtn.frame = CGRectMake(0, 20, 50, 44);
+        [backBtn setImage:[UIImage imageNamed:@"ArrowLeft"] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"ArrowLeft"] forState:UIControlStateHighlighted];
+        backBtn.imageEdgeInsets = UIEdgeInsetsMake(12, 15, 14, 25);//高20，宽10
         [backBtn addTarget:self action:@selector(backToLastPage:) forControlEvents:UIControlEventTouchUpInside];
         [viewForNav addSubview:backBtn];
         
         
-        self.searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(15+backBtn.frame.size.width, 20+(44-30)/2, ScreenWidth-40-15-15-15-backBtn.frame.size.width, 30)];
+        self.searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(50, 20+(44-30)/2, ScreenWidth-100, 30)];
         _searchTextField.backgroundColor = kSystemGrayColor;
         _searchTextField.textColor = [UIColor blackColor];
         _searchTextField.borderStyle = UITextBorderStyleRoundedRect;

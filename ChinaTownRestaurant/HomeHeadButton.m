@@ -18,7 +18,7 @@
 
 //图片的绘制区域
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
-    CGRect rect = CGRectMake(contentRect.origin.x, contentRect.size.height * 0.0, contentRect.size.width, contentRect.size.height * 0.8);
+    CGRect rect = CGRectMake(contentRect.origin.x, contentRect.size.height * 0.0, contentRect.size.width, contentRect.size.height * 0.75);
     return rect;
 }
 

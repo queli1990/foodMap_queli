@@ -67,6 +67,7 @@
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//    return 1;
     if (section == 0) {
         return 3;
     }else{
@@ -75,10 +76,12 @@
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+//    return 1;
     return 2;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    return 80;
     if (section == 0) {
         return 1;
     }else{
@@ -87,6 +90,7 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    return 20;
     if (section == 0) {
         return 1;
     }else{
@@ -108,6 +112,22 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+//    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 80)];
+//    
+//    UIButton *quiteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    quiteBtn.frame = CGRectMake(30, 25, ScreenWidth-60, 50);
+//    quiteBtn.backgroundColor = [UIColor redColor];
+//    quiteBtn.titleLabel.font = [UIFont systemFontOfSize:18.0];
+//    
+//    quiteBtn.clipsToBounds = YES;
+//    quiteBtn.layer.cornerRadius = 2.0;
+//    
+//    [quiteBtn setTitle:@"退出" forState:UIControlStateNormal];
+//    [quiteBtn setTintColor:[UIColor whiteColor]];
+//    [quiteBtn addTarget:self action:@selector(quiteBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [footView addSubview:quiteBtn];
+//    return footView;
     if (section == 0) {
         UIView *viewForHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 1)];
         viewForHeader.backgroundColor = [UIColor clearColor];
@@ -136,6 +156,9 @@
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;//cell取消点中效果颜色
     
+//    cell.titleLabel.text = @"我的收藏";
+//    cell.headImg.hidden = YES;
+//    return cell;
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -150,7 +173,7 @@
             UIFont *font = [UIFont fontWithName:@"Arial" size:16];
             cell.inputLabel.font = font;
             CGSize labelSize = [cell.inputLabel.text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName, nil]];
-            cell.inputLabel.frame = CGRectMake(ScreenWidth-55-labelSize.width-5 , 5, labelSize.width, 50);
+            cell.inputLabel.frame = CGRectMake(ScreenWidth-30-labelSize.width-5 , 5, labelSize.width, 50);
             return cell;
         }else {
             cell.titleLabel.text = @"修改密码";
@@ -178,13 +201,13 @@
             [alert show];
         }
     }
-    
-    if (indexPath.section == 1) {
-        if (indexPath.row == 0) {
-            MyCollectionViewController *vc = [[MyCollectionViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-    }
+//我的收藏
+//    if (indexPath.section == 1) {
+//        if (indexPath.row == 0) {
+//            MyCollectionViewController *vc = [[MyCollectionViewController alloc] init];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//    }
     
 }
 

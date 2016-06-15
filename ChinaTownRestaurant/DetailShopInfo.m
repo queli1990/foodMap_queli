@@ -23,8 +23,8 @@
         _nameLabel.textAlignment = NSTextAlignmentLeft;
         [_backgroundImageView addSubview:_nameLabel];
         
-        self.tipView = [[TipCircleView alloc] initWithFrame:CGRectMake(ScreenWidth-58, 0, 58, 58)];
-        _tipView.imageView.image = [UIImage imageNamed:@"tip_ circle"];
+        self.tipView = [[TipCircleView alloc] initWithFrame:CGRectMake(ScreenWidth-60, 0, 60, 60)];
+        _tipView.imageView.image = [UIImage imageNamed:@"tip_red"];
         [_backgroundImageView addSubview:_tipView];
         
         self.categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_nameLabel.frame)+10, 17, ScreenWidth-_tipView.frame.size.width-CGRectGetMaxX(_nameLabel.frame)-5, 20)];

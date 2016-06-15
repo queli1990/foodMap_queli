@@ -32,4 +32,10 @@
 #define kSystemOrangeColor ([UIColor colorWithRed:255.0/255.0 green:84.0/255 blue:0 alpha:1.0])
 #define kSystemGrayColor ([UIColor colorWithRed:224.0/255.0 green:224.0/255.0 blue:224.0/255.0 alpha:1.0])
 
+#define k5sWith 320
+#define k6With 375
+#define k6PWith 414
+
+
+
 #endif /* pch_pch */

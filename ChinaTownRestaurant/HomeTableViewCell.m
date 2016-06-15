@@ -37,7 +37,7 @@
         self.showView = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_whiteLineView.frame), ScreenWidth, 200/scal)];
         _showView.image = [UIImage imageNamed:@"HomeCellShade"];
         self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, (39-24)/2, 24, 24)];
-        _iconImageView.image = [UIImage imageNamed:@"HomeCellIcon"];
+//        _iconImageView.image = [UIImage imageNamed:@"HomeCellIcon"];
         self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_iconImageView.frame)+10, (39-20)/2, ScreenWidth-10-CGRectGetMaxX(_iconImageView.frame)-100, 20)];
         _nameLabel.font = [UIFont systemFontOfSize:18.0];
         _nameLabel.textColor = UIColorFromRGB(0xffffff, 1.0);
@@ -52,7 +52,7 @@
         
         
         self.adressAndPriceView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_bigPicture.frame), ScreenWidth, 50)];
-        _adressAndPriceView.backgroundColor = UIColorFromRGB(0xffffff, 0.18);
+        _adressAndPriceView.backgroundColor = UIColorFromRGB(0x000000, 0.20);
         
         self.adressLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, ScreenWidth-20, 20)];
         _adressLabel.font = [UIFont systemFontOfSize:12.0];
@@ -80,6 +80,20 @@
 
 - (void) setModel:(HomeModel *)model{
     _model = model;
+    
+    if ([model.category isEqualToString:@"217"]) {
+        _iconImageView.image = [UIImage imageNamed:@"cell_icon_sneck"];
+    }else if ([model.category isEqualToString:@"103"]){
+        _iconImageView.image = [UIImage imageNamed:@"cell_icon_guangdong"];
+    }else if ([model.category isEqualToString:@"102"]){
+        _iconImageView.image = [UIImage imageNamed:@"cell_icon_sichuan"];
+    }else if ([model.category isEqualToString:@"106"]){
+        _iconImageView.image = [UIImage imageNamed:@"cell_icon_dongbei"];
+    }else if ([model.category isEqualToString:@"101"]){
+        _iconImageView.image = [UIImage imageNamed:@"cell_icon_jiangzhe"];
+    }else {
+        _iconImageView.image = [UIImage imageNamed:@"HomeCellIcon"];
+    }
     
     [_bigPicture sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"placeholder_16_9"]];
     _nameLabel.text = model.name;

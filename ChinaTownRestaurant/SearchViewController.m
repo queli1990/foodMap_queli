@@ -168,6 +168,8 @@
     vc.chooseCategoryCount = self.chooseCount;
     vc.chooseCategoryArray = self.chooseArray;
     [self.navigationController pushViewController:vc animated:YES];
+    
+    [self removeFromParentViewController];
     return YES;
 }
 
@@ -191,12 +193,22 @@
     self.navView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 64)];
     _navView.backgroundColor = [UIColor blackColor];
     
-    self.searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(15, 20+(44-30)/2, ScreenWidth-40-15-15-15, 30)];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 20, 50, 44);
+    [btn setImage:[UIImage imageNamed:@"ArrowLeft"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"ArrowLeft"] forState:UIControlStateHighlighted];
+    btn.imageEdgeInsets = UIEdgeInsetsMake(12, 15, 12, 25);//高20，宽10
+    [btn addTarget:self action:@selector(popToLastPage:) forControlEvents:UIControlEventTouchUpInside];
+    [_navView addSubview:btn];
+    
+    
+    self.searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(50, 20+(44-30)/2, ScreenWidth-100, 30)];
     _searchTextField.backgroundColor = kSystemGrayColor;
     _searchTextField.textColor = [UIColor blackColor];
     _searchTextField.borderStyle = UITextBorderStyleRoundedRect;
 //    _searchTextField.layer.masksToBounds = YES;
-//    _searchTextField.layer.cornerRadius = 0.6;
+//    _searchTextField.layer.cornerRadius = 6;
     _searchTextField.placeholder = @"输入商户名、地点";
     _searchTextField.font = [UIFont systemFontOfSize:16.0];
     _searchTextField.textAlignment = NSTextAlignmentLeft;
@@ -219,7 +231,7 @@
     [_cancleBtn setTitle:@"取消" forState:UIControlStateNormal];
     [_cancleBtn setTitleColor:kSystemOrangeColor forState:UIControlStateNormal];
     [_cancleBtn addTarget:self action:@selector(popToLastPage:) forControlEvents:UIControlEventTouchUpInside];
-    [_navView addSubview:_cancleBtn];
+//    [_navView addSubview:_cancleBtn];
     
     [self.view addSubview:_navView];
 }
