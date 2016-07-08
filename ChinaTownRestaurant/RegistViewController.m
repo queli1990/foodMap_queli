@@ -113,6 +113,7 @@
     [_passWordTextField setAttributedPlaceholder:attribute2];
     _passWordTextField.font = [UIFont systemFontOfSize:16.0];
     //    _passWordTextField.borderStyle = UITextBorderStyleRoundedRect;
+    _passWordTextField.secureTextEntry = YES;
     _passWordTextField.delegate = self;
     [inputView2 addSubview:_passWordTextField];
     
@@ -138,6 +139,7 @@
     self.repassWordTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(passwordImageView.frame)+15, 5, _nickNameTextField.frame.size.width, 40)];
     _repassWordTextField.textColor = [UIColor whiteColor];
     _repassWordTextField.placeholder = @"请确认密码";
+    _repassWordTextField.secureTextEntry = YES;
     //设置placeholder的颜色
     NSMutableDictionary *dict3 = [NSMutableDictionary dictionary];
     dict3[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -173,7 +175,7 @@
         [_nickNameTextField resignFirstResponder];
         return;
     }
-    if (_passWordTextField.text.length>6) {
+    if (_passWordTextField.text.length<6) {
         [self presentViewController:_passWordAlert animated:YES completion:nil];
         [_passWordTextField resignFirstResponder];
         return;

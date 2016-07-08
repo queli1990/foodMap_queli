@@ -100,6 +100,7 @@
     self.passWordTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(passwordImageView.frame)+15, 5, _nickNameTextField.frame.size.width, 30)];
     _passWordTextField.textColor = [UIColor whiteColor];
     _passWordTextField.placeholder = @"请输入6位数以上密码";
+    _passWordTextField.secureTextEntry = YES;
     //设置placeholder的颜色
     NSMutableDictionary *dict2 = [NSMutableDictionary dictionary];
     dict2[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -174,6 +175,8 @@
             [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"userId"];
             PersonalViewController *vc = [[PersonalViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+            
+            [self removeFromParentViewController];
             
         }else{
             UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"警告" message:@"用户名或密码错误" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];

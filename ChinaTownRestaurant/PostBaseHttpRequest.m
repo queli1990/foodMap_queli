@@ -18,17 +18,19 @@
     NSString*url = [self buildUrlStr:nil andTransactionSuffix:urlSuffix];
     //    NSLog(@"url:%@",url);
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    
-    [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         self._data = responseObject;
         block(self);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         _error = error;
         failureBlock(self);
     }];
+
 }
 
 - (void) basePostFlagRequest:(NSDictionary *)params andTransactionSuffix:(NSString *) urlSuffix andBlock:(PostBasehttpFlagBlock)block andFailure:(PostBasehttpFlagBlock)failureBlock{
@@ -36,24 +38,22 @@
     NSString*url = [self buildUrlStr:nil andTransactionSuffix:urlSuffix];
     //    NSLog(@"url:%@",url);
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];;
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];//请求格式
     
-    [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         self.flag = [NSString stringWithFormat:@"%@",dic[@"success"]];
         
         block(self.flag);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         self.flag = @"failure";
         _error = error;
         failureBlock(self.flag);
-        
     }];
     
 }

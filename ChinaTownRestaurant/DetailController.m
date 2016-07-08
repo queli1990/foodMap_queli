@@ -444,44 +444,53 @@
     [self.view addSubview:_navView];
 }
 
+//收藏按钮点击事件
 - (void) collectionBtnClick:(UIButton *)btn{
     NSString *userID = [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"];
     if (userID.length) {
-        btn.selected = !btn.selected;
-        
-        btn.userInteractionEnabled = NO;
-        if (TARGET_IPHONE_SIMULATOR) NSLog(@"目前不能取消收藏，顾把btn设置为不可点击状态");
         
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         [dic setObject:self.businessId forKey:@"businessId"];
         [dic setObject:userID forKey:@"userId"];
         if (btn.selected) {
+            if (TARGET_IPHONE_SIMULATOR) NSLog(@"取消收藏");
             
-            [[DetailCollectionRequest alloc] requestData:dic andBlock:^(DetailCollectionRequest *responseData) {
-                btn.userInteractionEnabled = YES;
-                btn.selected = YES;
+            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+            manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+            
+            NSString *deleteUrl = [NSString stringWithFormat:@"http://food.gochinatv.com:2048/api/collects/delete.json?userId=%@&businessId=%@",userID,self.businessId];
+            
+            [manager GET:deleteUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
-            } andFailureBlock:^(DetailCollectionRequest *responseData) {
-                btn.userInteractionEnabled = YES;
-                btn.selected = NO;
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"收藏失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                if (TARGET_IPHONE_SIMULATOR) NSLog(@"%@",dic);
+                
+                if (dic[@"success"]) {
+                    btn.selected = NO;
+                }else{
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"取消收藏失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alert show];
+                }
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                btn.selected = YES;
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"取消收藏失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert show];
             }];
             
         }else{
             
-            if (TARGET_IPHONE_SIMULATOR) NSLog(@"取消收藏");
+            if (TARGET_IPHONE_SIMULATOR) NSLog(@"收藏");
             
-            
-            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-            manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-            [manager DELETE:[NSString stringWithFormat:@"http://i.vego.tv:2048/api/collects/%@.json",userID] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [[DetailCollectionRequest alloc] requestData:dic andBlock:^(DetailCollectionRequest *responseData) {
                 
-                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-                if (TARGET_IPHONE_SIMULATOR) NSLog(@"%@",dic);
+                btn.selected = YES;
                 
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            } andFailureBlock:^(DetailCollectionRequest *responseData) {
                 
+                btn.selected = NO;
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"收藏失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
             }];
         }
     }else{

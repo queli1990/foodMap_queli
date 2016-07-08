@@ -7,9 +7,15 @@
 //
 
 #import "MyCollectionViewController.h"
+#import "MyCollectionViewCell.h"
+#import "MyCollectionRequest.h"
 
-@interface MyCollectionViewController ()
+@interface MyCollectionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UIView *navView;
+@property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) NSMutableArray *datas;
+@property (nonatomic) CGFloat cellHeight;
+
 @end
 
 @implementation MyCollectionViewController
@@ -18,9 +24,63 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self setNav];
     
+    [self requestData];
     
+    
+}
+
+- (void) requestData{
+    NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"];
+    NSString *urlStr = [NSString stringWithFormat:@"api/collects/userid/%@.json",userId];
+    
+    MyCollectionRequest *request = [[MyCollectionRequest alloc]init];
+    request.requestUrl = urlStr;
+    [request requestData:nil andBlock:^(MyCollectionRequest *responseData) {
+        
+        self.datas = (NSMutableArray *)responseData.models;
+        
+        [self initTableView];
+        
+    } andFailureBlock:^(MyCollectionRequest *responseData) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"加载失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.datas.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MyCollectionViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCollectionViewCell" forIndexPath:indexPath];
+    cell.model = self.datas[indexPath.row];
+    _cellHeight = [cell homeCellHeight];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;//cell取消点中效果颜色
+    return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return ScreenWidth*9/16+50;
+}
+
+
+- (void) initTableView{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-64) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [_tableView registerClass:[MyCollectionViewCell class] forCellReuseIdentifier:@"MyCollectionViewCell"];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:_tableView];
 }
 
 - (void) setNav{
@@ -44,6 +104,14 @@
     
     [self.view addSubview:_navView];
 }
+
+- (NSMutableArray *)datas{
+    if (_datas == nil) {
+        _datas = [NSMutableArray array];
+    }
+    return _datas;
+}
+
 
 - (void) backToLastPage:(UIButton *)btn{
     [self.navigationController popViewControllerAnimated:YES];

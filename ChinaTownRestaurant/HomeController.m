@@ -338,8 +338,8 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return _cellHeight;
-//    return ScreenWidth*9/16+5;
+//    return _cellHeight;
+    return ScreenWidth*9/16+50;
 }
 
 

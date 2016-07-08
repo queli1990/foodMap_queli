@@ -156,10 +156,10 @@
 //    NSString *loactionStr = [NSString stringWithFormat:@"http://maps.google.cn/maps/api/geocode/json?latlng=32.3288250000,121.2492190000&language=CN"];//南通市
     
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//二进制格式转换过来
     
-    [manager GET:loactionStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:loactionStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];//把二进制的数据通过json转换过来
         
@@ -174,10 +174,10 @@
         [_user setObject:[NSString stringWithFormat:@"%f",_locationManager.location.coordinate.longitude] forKey:@"longitude"];
         [_user setObject:[NSString stringWithFormat:@"%f",_locationManager.location.coordinate.latitude] forKey:@"latitude"];
         
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+    
 }
 
 
